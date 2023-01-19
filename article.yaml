@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contentservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contentservice
+  template:
+    metadata:
+      labels:
+        app: contentservice
+    spec:
+      containers:
+        - name: assetservice
+          image: sibendu/assetservice
+          ports:
+            - containerPort: 8080
+          env:
+            - name: spring.profiles.active
+              value: dev
+          imagePullPolicy: Always
+        - name: articleservice
+          image: sibendu/articleservice
+          ports:
+            - containerPort: 8081
+          env:
+            - name: spring.profiles.active
+              value: dev
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: contentservice
+spec:
+  type: NodePort
+  selector:
+    app: contentservice
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 32080
+      name: asset
+    - port: 8081
+      targetPort: 8081
+      nodePort: 32081 
+      name: article

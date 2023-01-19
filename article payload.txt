@@ -1,0 +1,63 @@
+[
+ {
+  "code": "art_12",
+  "description": "new article 12",
+  "assets": [
+    {
+      "filename": "asset_1",
+      "daUrl": "http://da.com/asset_1"
+    },
+    {
+      "filename": "asset_2",
+      "daUrl": "http://da.com/asset_2"
+    }
+  ]
+ },
+ {
+  "code": "art_34",
+  "description": "new article 34",
+  "assets": [
+    {
+      "filename": "asset_3",
+      "daUrl": "http://da.com/asset_3"
+    },
+    {
+      "filename": "asset_4",
+      "daUrl": "http://da.com/asset_4"
+    }
+  ]
+ }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": 547,
+  "assets": [
+    {
+      "id": 548,
+      "filename": "asset_3",
+      "daUrl": "http://da.com/asset_3",
+      "philipsUrl": "http://philips.com/asset_3"
+    },
+    {
+      "id": 549,
+      "filename": "asset_4",
+      "daUrl": "http://da.com/asset_4",
+      "philipsUrl": "http://philips.com/asset_4"
+    }
+  ]
+}
